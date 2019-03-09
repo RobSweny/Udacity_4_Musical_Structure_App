@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="music_application">Music Application</string>
+    <string name="rap">Rap</string>
+    <string name="blues">Blues</string>
+    <string name="rock">Rock</string>
+    <string name="salsa">Salsa</string>
+    <string name="electronic">Electronic</string>
+    <string name="reggae">Reggae</string>
+    <string name="folk">Folk</string>
+    <string name="genres">Genres:</string>
+</resources>
