@@ -4,7 +4,7 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
 
-    <color name="scrollview_blue">#627a86</color>
-    <color name="background_blue">#6f8a96</color>
+    <color name="scrollview_blue">#64919e</color>
+    <color name="background_blue">#84a5b4</color>
     <color name="icon_black">#2c2e2e</color>
 </resources>

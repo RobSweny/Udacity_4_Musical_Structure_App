@@ -36,7 +36,7 @@
 
         <HorizontalScrollView
             android:layout_width="wrap_content"
-            android:layout_height="50dp"
+            android:layout_height="45dp"
             android:background="@color/scrollview_blue"
             android:fadeScrollbars="false"
             android:fadingEdgeLength="10dp"
