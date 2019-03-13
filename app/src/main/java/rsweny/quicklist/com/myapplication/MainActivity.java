@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
@@ -43,6 +44,9 @@ public class MainActivity extends AppCompatActivity{
     private ListView listView;
     private BottomNavigationView bottom_navigation;
     private ImageButton play_imagebutton;
+    private static WordAdapter adapter;
+    ArrayList<Song> songs;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +62,7 @@ public class MainActivity extends AppCompatActivity{
         bottom_navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         bottom_navigation.getMenu().findItem(R.id.navigation_music_player).setVisible(false);
 
-        final ArrayList<Song> songs = new ArrayList<>();
+        songs = new ArrayList<>();
         //("song_name", "artist_name", "song_length", "song_genre")
         /*  ROCK    */
         songs.add(new Song("Purple Haze","Jimi Hendrix", "4.32", "Rock"));
@@ -84,16 +88,21 @@ public class MainActivity extends AppCompatActivity{
         songs.add(new Song("One Love","Bob Marley", "4.32", "Reggae"));
         songs.add(new Song("I Can See Clearly Now","Jimmy Cliff", "2.32", "Reggae"));
 
-        WordAdapter adapter = new WordAdapter(this, songs);
+        adapter = new WordAdapter(songs, getApplicationContext());
         listView.setAdapter(adapter);
-        listView.setOnItemClickListener((AdapterView.OnItemClickListener) MainActivity.this);
 
-
+        // Set onClick Listener
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Song song = songs.get(position);
+                Snackbar.make(view, song.getSongName() + "\n" + song.getArtistName(), Snackbar.LENGTH_LONG)
+                        .setAction("No action", null).show();
+            }
+        });
 
 
 
 
     } // End onCreate
-
-
 } // End Main Activity
