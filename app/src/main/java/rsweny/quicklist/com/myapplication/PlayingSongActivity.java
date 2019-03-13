@@ -52,15 +52,28 @@ public class PlayingSongActivity extends AppCompatActivity {
         play_pause_song_button = findViewById(R.id.previous_song_button);
         next_song_button = findViewById(R.id.previous_song_button);
 
+        previous_song_button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v)  {
+                Toast.makeText(PlayingSongActivity.this,"PREVIOUS",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        play_pause_song_button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v)  {
+                Toast.makeText(PlayingSongActivity.this,"PLAY | PAUSE",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        next_song_button.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v)  {
+                Toast.makeText(PlayingSongActivity.this,"NEXT",Toast.LENGTH_SHORT).show();
+            }
+        });
     } // End onCreate
 
-    public void songChange(View view) {
-        if (view.getId() == R.id.previous_song_button) {
-            Toast.makeText(this,"PREVIOUS",Toast.LENGTH_SHORT).show();
-        } else if (view.getId() == R.id.play_pause_song_button) {
-            Toast.makeText(this,"PLAY|PAUSE",Toast.LENGTH_SHORT).show();
-        } else if (view.getId() == R.id.next_song_button) {
-            Toast.makeText(this,"NEXT",Toast.LENGTH_SHORT).show();
-        }
-    } // End songChange
+
+
 }
