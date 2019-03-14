@@ -5,6 +5,7 @@
     <color name="colorAccent">#D81B60</color>
 
     <color name="scrollview_blue">#64919e</color>
+    <color name="scrollview_blue_selected">#466871</color>
     <color name="background_blue">#84a5b4</color>
     <color name="icon_black">#2c2e2e</color>
 </resources>

@@ -1,26 +1,31 @@
 package rsweny.quicklist.com.myapplication;
 
-class Song {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+import java.util.ArrayList;
+
+class Song implements Parcelable {
 
     private String song_name;
     private String artist_name;
     private String song_length;
     private String song_genre;
 
-
-    public Song(String m_song_name, String m_artist_name, String m_song_length, String m_song_genre) {
+    public Song(String song_name, String artist_name, String song_length, String song_genre) {
         // Creating song object
-        song_name = m_song_name;
-        artist_name = m_artist_name;
-        song_length = m_song_length;
-        song_genre = m_song_genre;
+        this.song_name = song_name;
+        this.artist_name = artist_name;
+        this.song_length = song_length;
+        this.song_genre = song_genre;
     }
+
 
     public String getSongName() {
         return song_name;
     }
 
-    public String getArtistName(){
+    public String getArtistName() {
         return artist_name;
     }
 
@@ -31,4 +36,36 @@ class Song {
     public String getSongGenre() {
         return song_genre;
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(song_name);
+        dest.writeString(artist_name);
+        dest.writeString(song_length);
+        dest.writeString(song_genre);
+    }
+
+    public Song(Parcel in) {
+        song_name = in.readString();
+        artist_name = in.readString();
+        song_length = in.readString();
+        song_genre = in.readString();
+    }
+
+    public static final Creator<Song> CREATOR = new Creator<Song>() {
+        @Override
+        public Song[] newArray(int size) {
+            return new Song[size];
+        }
+
+        @Override
+        public Song createFromParcel(Parcel source) {
+            return new Song(source);
+        }
+    };
+
 }

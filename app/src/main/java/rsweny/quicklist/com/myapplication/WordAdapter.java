@@ -1,31 +1,27 @@
 package rsweny.quicklist.com.myapplication;
 
-import android.app.Activity;
 import android.content.Context;
-import android.support.design.widget.Snackbar;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class WordAdapter extends ArrayAdapter<Song> implements View.OnClickListener{
+public class WordAdapter extends ArrayAdapter<Song> implements View.OnClickListener {
 
     private ArrayList<Song> songs;
     Context mContext;
 
 
-    public WordAdapter( ArrayList<Song> song, Context context) {
-        super(context,R.layout.custom_listview_item, song);
+    public WordAdapter(ArrayList<Song> song, Context context) {
+        super(context, R.layout.custom_listview_item, song);
         this.songs = song;
-        this.mContext=context;
+        this.mContext = context;
     }
 
     // View lookup cache
@@ -37,15 +33,15 @@ public class WordAdapter extends ArrayAdapter<Song> implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        int position=(Integer) v.getTag();
-        Object object= getItem(position);
-        Song song = (Song)object;
+        int position = (Integer) v.getTag();
+        Object object = getItem(position);
+        Song song = (Song) object;
 
-        switch (v.getId())
-        {
+        switch (v.getId()) {
             case R.id.play_imagebutton:
-                Snackbar.make(v, "Song Name: " + song.getSongName(), Snackbar.LENGTH_LONG)
-                        .setAction("No action", null).show();
+                Intent intent = new Intent(mContext, PlayingSongActivity.class);
+                intent.putExtra("song_position_number", position);
+                mContext.startActivity(intent);
                 break;
         }
     } // End onClick
@@ -85,8 +81,6 @@ public class WordAdapter extends ArrayAdapter<Song> implements View.OnClickListe
         // Return the completed view to render on screen
         return convertView;
     }
-
-
 
 
 }

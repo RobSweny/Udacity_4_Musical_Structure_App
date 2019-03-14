@@ -46,64 +46,88 @@
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="55dp"
                 android:orientation="horizontal">
 
-                <TextView
+                <Button
+                    android:id="@+id/all_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
+                    android:text="@string/all"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    />
+
+                <Button
+                    android:id="@+id/rap_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:text="@string/rap"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    />
 
-                <TextView
+                <Button
+                    android:id="@+id/blues_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
                     android:text="@string/blues"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    />
 
-                <TextView
+                <Button
+                    android:id="@+id/rock_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
                     android:text="@string/rock"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    />
 
-                <TextView
+                <Button
+                    android:id="@+id/electronic_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
                     android:text="@string/electronic"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    />
 
-                <TextView
+                <Button
+                    android:id="@+id/salsa_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
                     android:text="@string/salsa"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    />
 
-                <TextView
+                <Button
+                    android:id="@+id/folk_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
                     android:text="@string/folk"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    />
 
-                <TextView
+                <Button
+                    android:id="@+id/reggae_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
                     android:text="@string/reggae"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    />
             </LinearLayout>
         </HorizontalScrollView>
 
