@@ -2,7 +2,6 @@ package rsweny.quicklist.com.myapplication;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,13 +13,13 @@ import java.util.ArrayList;
 
 public class WordAdapter extends ArrayAdapter<Song> implements View.OnClickListener {
 
-    private ArrayList<Song> songs;
+    private ArrayList<Song> song_holder;
     Context mContext;
 
 
-    public WordAdapter(ArrayList<Song> song, Context context) {
-        super(context, R.layout.custom_listview_item, song);
-        this.songs = song;
+    public WordAdapter(ArrayList<Song> song_holder, Context context) {
+        super(context, R.layout.custom_listview_item, song_holder);
+        this.song_holder = song_holder;
         this.mContext = context;
     }
 

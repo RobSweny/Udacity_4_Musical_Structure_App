@@ -18,28 +18,26 @@
 
         <RelativeLayout
             android:layout_width="220dp"
-            android:layout_height="220dp"
-            >
+            android:layout_height="220dp">
 
             <ImageView
                 android:id="@+id/cover_art_imageview"
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:layout_gravity="center"
-                android:background="@color/scrollview_blue"
-                android:layout_margin="15dp" />
+                android:layout_margin="15dp"
+                android:background="@color/scrollview_blue" />
 
             <TextView
                 android:id="@+id/cover_art_textview"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:gravity="center"
                 android:text="THIS IS A TEST FOR THE SONG NAME"
                 android:textSize="35sp"
-                android:textStyle="bold"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_margin="20dp"
-                />
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <TextView
@@ -65,35 +63,34 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_margin="10dp">
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
 
             <Button
                 android:id="@+id/previous_song_button"
                 android:layout_width="50dp"
                 android:layout_height="35dp"
-                android:layout_margin="15dp"
                 android:layout_gravity="center"
-                android:background="@drawable/previous_song_icon"
-                />
+                android:layout_margin="15dp"
+                android:background="@drawable/previous_song_icon" />
 
             <Button
                 android:id="@+id/play_pause_song_button"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
+                android:layout_gravity="center"
                 android:layout_marginStart="25dp"
                 android:layout_marginLeft="25dp"
-                android:layout_marginRight="25dp"
                 android:layout_marginEnd="25dp"
-                android:layout_gravity="center"
-                android:background="@drawable/pause_icon"/>
+                android:layout_marginRight="25dp"
+                android:background="@drawable/pause_icon" />
 
             <Button
                 android:id="@+id/next_song_button"
                 android:layout_width="50dp"
                 android:layout_height="35dp"
-                android:layout_margin="15dp"
                 android:layout_gravity="center"
+                android:layout_margin="15dp"
                 android:background="@drawable/next_song_icon" />
 
         </LinearLayout>

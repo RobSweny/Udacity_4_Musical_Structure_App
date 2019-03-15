@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -46,9 +47,9 @@ public class PlayingSongActivity extends AppCompatActivity {
     private Boolean play_pause = true;
     private TextView cover_art_textview;
     private ImageView cover_art_imageview;
-    private ArrayList<Song> songs;
-    ArrayList<String> songs_array = new ArrayList<>();
-
+    public ArrayList<Song> songs;
+    public ArrayList<Song> song_holder;
+    private String filteredGenre;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,8 +75,7 @@ public class PlayingSongActivity extends AppCompatActivity {
         cover_art_textview = findViewById(R.id.cover_art_textview);
 
         songs = new ArrayList<>();
-        //("song_name", "artist_name", "song_length", "song_genre")
-        /*  ROCK    */
+        song_holder = new ArrayList<>();
         songs.add(new Song("Purple Haze", "Jimi Hendrix", "4.32", "Rock"));
         songs.add(new Song("Hotel California", "The Eagles", "2.32", "Rock"));
         songs.add(new Song("Kashmir", "Led Zepplin", "5.32", "Rock"));
@@ -99,12 +99,12 @@ public class PlayingSongActivity extends AppCompatActivity {
         songs.add(new Song("One Love", "Bob Marley", "4.32", "Reggae"));
         songs.add(new Song("I Can See Clearly Now", "Jimmy Cliff", "2.32", "Reggae"));
 
+
         // Get the position of the user clicked button
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             song_position_number = extras.getInt("song_position_number");
         } // End if
-
 
         previous_song_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -161,15 +161,23 @@ public class PlayingSongActivity extends AppCompatActivity {
     }
 
     public void updateViews() {
-        current_song_textview.setText(songs.get(song_position_number).getSongName());
-        current_artist_textview.setText(songs.get(song_position_number).getArtistName());
+        int numtries = 3;
+        while (numtries-- != 0)
+            try {
+                current_song_textview.setText(songs.get(song_position_number).getSongName());
+                current_artist_textview.setText(songs.get(song_position_number).getArtistName());
 
-        cover_art_imageview.setBackgroundColor(getRandomColor());
-        cover_art_textview.setText(songs.get(song_position_number).getSongName());
-        cover_art_textview.setTextColor(getRandomColor());
+                cover_art_imageview.setBackgroundColor(getRandomColor());
+                cover_art_textview.setText(songs.get(song_position_number).getSongName());
+                cover_art_textview.setTextColor(getRandomColor());
+                break;
+            } catch (Exception e) {
+                Toast.makeText(this, filteredGenre + " genre loaded", Toast.LENGTH_SHORT).show();
+                song_position_number = 0;
+            }
     }
 
-    public int getRandomColor(){
+    public int getRandomColor() {
         Random rnd = new Random();
         return Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
     }

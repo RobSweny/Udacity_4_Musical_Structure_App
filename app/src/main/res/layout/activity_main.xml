@@ -51,83 +51,75 @@
 
                 <Button
                     android:id="@+id/all_button"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/all"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/rap_button"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/rap"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/blues_button"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/blues"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/rock_button"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/rock"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/electronic_button"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/electronic"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/salsa_button"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/salsa"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/folk_button"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/folk"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/reggae_button"
+                    style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/reggae"
                     android:textSize="15sp"
-                    android:textStyle="bold"
-                    style="@style/Widget.AppCompat.Button.Borderless"
-                    />
+                    android:textStyle="bold" />
             </LinearLayout>
         </HorizontalScrollView>
 
@@ -139,11 +131,11 @@
             android:alwaysDrawnWithCache="true"
             android:dividerHeight="2dp"
             android:horizontalSpacing="3dp"
+            android:paddingBottom="25dp"
             android:scrollingCache="true"
             android:smoothScrollbar="true"
             android:stretchMode="columnWidth"
-            android:verticalSpacing="3dp"
-            android:paddingBottom="25dp"/>
+            android:verticalSpacing="3dp" />
     </LinearLayout>
 
     <FrameLayout

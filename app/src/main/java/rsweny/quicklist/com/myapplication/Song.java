@@ -3,8 +3,6 @@ package rsweny.quicklist.com.myapplication;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.util.ArrayList;
-
 class Song implements Parcelable {
 
     private String song_name;
@@ -20,6 +18,17 @@ class Song implements Parcelable {
         this.song_genre = song_genre;
     }
 
+    public static final Creator<Song> CREATOR = new Creator<Song>() {
+        @Override
+        public Song createFromParcel(Parcel in) {
+            return new Song(in);
+        }
+
+        @Override
+        public Song[] newArray(int size) {
+            return new Song[size];
+        }
+    };
 
     public String getSongName() {
         return song_name;
@@ -55,17 +64,4 @@ class Song implements Parcelable {
         song_length = in.readString();
         song_genre = in.readString();
     }
-
-    public static final Creator<Song> CREATOR = new Creator<Song>() {
-        @Override
-        public Song[] newArray(int size) {
-            return new Song[size];
-        }
-
-        @Override
-        public Song createFromParcel(Parcel source) {
-            return new Song(source);
-        }
-    };
-
 }
