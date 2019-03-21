@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Song List</string>
     <string name="title_home">Song List</string>
     <string name="title_notifications">Song Player</string>
     <string name="music_application">Music Application</string>
@@ -12,10 +12,4 @@
     <string name="folk">Folk</string>
     <string name="genres">Genres:</string>
     <string name="all">All</string>
-
-    <string-array name="songs">
-        <item>Test, Test2, Test3</item>
-        <item>Test4, Test5, Test6</item>
-        <item>Test7, Test8, Test9</item>
-    </string-array>
 </resources>
